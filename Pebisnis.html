@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEBISNIS - Kayuadi Squad</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            min-height: 100vh;
+        }
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .main-content {
+            display: none;
+        }
+        .header {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        .member-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            margin-bottom: 1rem;
+        }
+        .member-card:hover {
+            transform: scale(1.05);
+        }
+        .member-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Halaman Login -->
+    <div id="login-page" class="login-container">
+        <div class="login-card">
+            <h2 class="text-center mb-4">Login ke pebisnis squad</h2>
+            <form id="login-form">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+            <p class="text-center mt-3 text-muted">Demo: Username: Pebisnis, Password: orangsukses</p>
+        </div>
+    </div>
+
+    <!-- Halaman Utama (Tersembunyi Awalnya) -->
+    <div id="main-page" class="main-content container mt-5">
+        <!-- Header -->
+        <div class="header text-center">
+            <h1>PEBISNIS</h1>
+            <p>Pebisnis yang Menginspirasi Generasi Muda Bukan <b>Penipuan</b></p>
+            <button id="logout-btn" class="btn btn-danger">Logout</button>
+        </div>
+
+        <!-- Tentang Grup -->
+        <section class="mb-5">
+            <h2>Tentang Kami</h2>
+            <p>Pebisnis Slebew adalah kelompok berisi enam orang dengan latar belakang berbeda—mulai dari pelayaran, farmasi, teknik informatika, teknik informasi, 
+               manajemen, hingga komunikasi penyiaran. Kami terbentuk dari kombinasi ide-ide random tapi penuh semangat, dengan masing-masing anggota punya gaya unik: 
+               ada kapten santuy, peracik obat galau, tukang ngoding sakti, ahli error, bos besar, dan tukang bacot profesional. Bersama, kami menciptakan suasana kompak, 
+               lucu, dan tetap “slebew” dalam setiap proyek yang kami kerjakan.L</p>
+        </section>
+
+        <!-- Anggota Grup -->
+        <section>
+            <h2>Anggota Grup</h2>
+            <div class="row">
+                <!-- Anggota 1 -->
+                <div class="col-md-4">
+                    <div class="member-card">
+                        <img src="summan foto3.jpg" alt="Anggota 1" class="member-img w-100">
+                        <div class="p-3">
+                            <h5>Summan</h5>
+                            <p><strong>Peran:</strong> Si Ahli Error 🖥️</p>
+                            <p><strong>Umur:</strong>  19 tahun</p>
+                            <p><strong>Hobi:</strong> Hobi ngomong “aku diem aja deh”</p>
+                            <p><strong>Biodata:</strong> Bisa nyambungin jaringan tapi gak bisa nyambungin hati. Sistemnya stabil, tapi perasaannya sering crash tanpa alasan. 💻💔</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Anggota 2 -->
+                <div class="col-md-4">
+                    <div class="member-card">
+                        <img src="lisa foto.jpg" alt="Anggota 2" class="member-img w-100">
+                        <div class="p-3">
+                            <h5>Nur Halisa</h5>
+                            <p><strong>Peran:</strong> Tukang Bacot Profesional 🎤</p>
+                            <p><strong>Umur:</strong> 18 tahun</p>
+                            <p><strong>Hobi:</strong> Revisi Foto</p>
+                            <p><strong>Biodata:</strong> Pandai ngomong di depan orang, tapi gagal nyampaikan perasaan ke satu orang. Suaranya nyampe ke pendengar, tapi hatinya gak pernah nyampe ke dia. 🎙️💔</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Anggota 3 -->
+                <div class="col-md-4">
+                    <div class="member-card">
+                        <img src="idil foto.jpg" alt="Anggota 3" class="member-img w-100">
+                        <div class="p-3">
+                            <h5>Aidil Adhar</h5>
+                            <p><strong>Peran:</strong> Peracik Obat Galau 💊</p>
+                            <p><strong>Umur:</strong> 18 tahun</p>
+                            <p><strong>Hobi:</strong> Hobi nyari tempat nongkrong “buat nugas”, tapi tugasnya nggak disentuh.</p>
+                            <p><strong>Biodata:</strong> Pinter ngeracik obat, tapi gak ada resep buat sembuhin luka hati sendiri. Katanya cinta bikin sehat, tapi kenapa efek sampingnya nyesek? 💊💔</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Anggota 4 -->
+                <div class="col-md-4">
+                    <div class="member-card">
+                        <img src="lisda foto3.jpg" alt="Anggota 4" class="member-img w-100">
+                        <div class="p-3">
+                            <h5>Nur Halisda</h5>
+                            <p><strong>Peran:</strong> Tukang Ngoding Sakti 💻</p>
+                            <p><strong>Umur:</strong> 19 tahun</p>
+                            <p><strong>Hobi:</strong> Hobi rebahan sambil mikirin tugas yang nggak dikerjain.</p>
+                            <p><strong>Biodata:</strong> Jago ngoding tapi gagal debug perasaan sendiri. Hatinya kayak program error—udah dicoba di-run berkali-kali, tapi tetap gak jalan. 💻</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Anggota 5 -->
+                <div class="col-md-4">
+                    <div class="member-card">
+                        <img src="dika foto3.jpg" alt="Anggota 5" class="member-img w-100">
+                        <div class="p-3">
+                            <h5>Nur Andika Bahar Kaswari</h5>
+                            <p><strong>Peran:</strong> Kapten Santuy ⚓</p>
+                            <p><strong>Umur:</strong> 19 tahun</p>
+                            <p><strong>Hobi:</strong> Mengarungi Lautan</p>
+                            <p><strong>Biodata:</strong> Sudah biasa melawan ombak di laut, tapi gak siap melawan ombak kenangan. Kompas bisa tunjuk arah, tapi gak bisa tunjuk jalan pulang ke hatinya. ⚓💔</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Anggota 6 -->
+                <div class="col-md-4">
+                    <div class="member-card">
+                        <img src="reski foto.jpg" alt="Anggota 6" class="member-img w-100">
+                        <div class="p-3">
+                            <h5>Reski Aulia Saputri</h5>
+                            <p><strong>Peran:</strong> Bos Besar 📊</p>
+                            <p><strong>Umur:</strong> 19 tahun</p>
+                            <p><strong>Hobi:</strong> Hobi ngeluh nggak punya waktu, padahal main HP 8 jam sehari.</p>
+                            <p><strong>Biodata:</strong>Jago ngatur waktu dan rencana, tapi gagal ngatur perasaan. Semua terencana dengan baik—kecuali kenapa bisa jatuh cinta dengan orang yang salah. 💔📊</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2025 Pebisnis SLEBEW. Hubungi kami di: Pebisnis@slebew.com | IG: @pebisnisslebew_06</p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript untuk Login
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username === 'Pebisnis' && password === 'orangsukses') {
+                document.getElementById('login-page').style.display = 'none';
+                document.getElementById('main-page').style.display = 'block';
+            } else {
+                alert('Username atau password salah!');
+            }
+        });
+
+        // Logout
+        document.getElementById('logout-btn').addEventListener('click', function() {
+            document.getElementById('main-page').style.display = 'none';
+            document.getElementById('login-page').style.display = 'flex';
+        });
+    </script>
+</body>
+</html>
